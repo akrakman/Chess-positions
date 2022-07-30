@@ -1,53 +1,37 @@
 # Description
 
-Chess Positions is a Flask and React web application that allows a chess player to compare two positions. The application 
+Chess Positions is a Flask and React web application that allows a chess player to compare two positions. The application uses data from my past personal games and serves as an exercise in 
+choosing the preferred position. This data is then exported to an Excel file, containing links to those positions a user prefers.
 
 
-Chess Positions is a Flask and React web application that allows a chess player to compare two positions online in the [chess.com](https://www.chess.com/) platform. The games can be filtered by the player rating (e.g. only displays games in which the player rating is above 1800), the time class (e.g. blitz, bullet, rapid, daily) and/or time control (e.g. 300, 900+10, 300+5).
+The application uses [chess.com](https://www.chess.com/)'s API to import the games information, [react-chessboard](https://react-chessboard.com/) to embed the chess board, and [chess.js](https://github.com/jhlywa/chess.js) to handle the moves and functionality.
 
-The application also displays the winning, losing and drawing percentages of the games in which each position was reached. It allows the player to track which positions he/she encounters more often, and the positions he/she most struggles with.
+The application is not deployed online right now but it may be in future!
 
-The application uses chess.com API to import the games information, chessboard.js to embed the chess board and chess.js to handle the moves.
+## Reflection
 
-You can check it out at http://fer123a.pythonanywhere.com/
-
-NOTE: There is also an integration with the Lichess platform, using its API. However, I don't recommend using it since it takes way too long to import the games from Lichess.
+The web app serves as an experience in Flask, React, and REST principles. The Excel is supposed to mimic a database so as to allow for focusing on areas other than databases (Excel is not a database).
 
 # How to use it
 
 ## Front page
 
-On the home page, type a username from chess.com and select which games you want to see, the ones in which the player plays as white, or the ones in which he plays as black.
+On the front page, wait a few moments for the web app to receive the data from the chess-web-api. Press the button on the bottom of the screen labeled "Reset Both Games" to load 2 new games on the boards (may need to try again). Think hard about the two positions; press the button underneath the position you prefer. The position will be saved in an Excel spreadsheet. Repeat steps!
 
-If you wish to further filter the games, click on "Filtering Options". It opens a menu, where you can add a filter by "Rating", this way, only the games in which the player has a rating larger than the inserted value will be displayed. 
+## Excel spreadsheet
 
-Another option is to add a "Time Class" filter, where you can select if you want to see "daily", "rapid", "blitz" or "bullet" games. There is also a "Time Control" filter, where you must insert a specific time control, given in seconds. For example, if you wish to see only the games where the players start with 5 minutes and have an increment of 5 seconds for each move (5|5), you must type "300+5". Other examples: 3|2 becomes 180+2; 15|10 becomes 900+10; 5|0 becomes 300.
-
-The filters "Time Control" and "Time Class" don't work together, you can use one of them, but not both.
-
-After all options are set, click on "Search Games".
-
-It may take a while to apply the filters and parse the pgn files, depending on the resulting number of games. 
-
-## Explorer
-
-When all the games are parsed, the explorer page is loaded.
-
-The explorer page is really straight forward. The box on the right side displays the database parsed. You can select a move from it, or drag a piece on the board. After there is a move on the board, you can use the arrows (from the keyboard, or clicking on the buttons) to go back or forward on the position. Be aware that if you go back and change a move, you can't get to that position again using the arrows.
-
-You can also click the reset button to go to the initial position and clicking on the logo takes you back to Home Page.
+View data I compiled from your visit such as FEN (Forsyth–Edwards Notation) and link to your Lichess analysis according to your FEN.
 
 # Credits
 
 chess.com API:
     https://www.chess.com/news/view/published-data-api
 
-chessboard.js:
-    Copyright 2019 Chris Oakman
-    https://chessboardjs.com/index.html
-    https://github.com/oakmac/chessboardjs
+react-chessboard:
+    Copyright 2022 Ryan Gregory
+    https://react-chessboard.com/
+    https://github.com/Clariity/react-chessboard
 
 chess.js:
-    Copyright (c) 2020, Jeff Hlywa (jhlywa@gmail.com)
+    Copyright (c) 2020, Jeff Hlywa
     https://github.com/jhlywa/chess.js
-
