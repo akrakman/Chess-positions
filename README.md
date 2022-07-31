@@ -24,14 +24,14 @@ View data I compiled from your visit such as FEN (Forsyth–Edwards Notation) an
 
 # Credits
 
-chess.com API:
-    https://www.chess.com/news/view/published-data-api
+chess.com API: <br>
+    [www.chess.com/news/view/published-data-api](https://www.chess.com/news/view/published-data-api)
 
 react-chessboard:
-    Copyright 2022 Ryan Gregory
-    https://react-chessboard.com/
-    https://github.com/Clariity/react-chessboard
+    Copyright 2022 Ryan Gregory <br>
+    [react-chessboard.com](https://react-chessboard.com/) <br>
+    [github.com/Clariity/react-chessboard](https://github.com/Clariity/react-chessboard)
 
 chess.js:
-    Copyright (c) 2020, Jeff Hlywa
-    https://github.com/jhlywa/chess.js
+    Copyright (c) 2020, Jeff Hlywa <br>
+    [github.com/jhlywa/chess.js](https://github.com/jhlywa/chess.js)
